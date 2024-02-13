@@ -1,0 +1,30 @@
+<div class="container">
+
+  <div class="title">Список чая</div>
+  <button mat-button (click)="changeMode()" class="changeButton">Сменить режим</button>
+  <div *ngIf="!ListMode">
+    <mat-grid-list cols="5" gutterSize="2vw" class="grid">
+      <mat-grid-tile  *ngFor="let tea of teas" routerLink="{{'/tea-info/'+tea.id}}" routerLinkActive='active' class="card" (click)= onSelect(tea) appHover>
+        <img color="accent" src="{{BaseURL+tea.image}}" alt={{tea.name}} class="teaImage">
+        <mat-grid-tile-header>
+          <h2>{{tea.name | uppercase}}</h2>
+        </mat-grid-tile-header>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <div *ngIf="ListMode" class="list">
+    <mat-grid-list cols="1" gutterSize="2vw" rowHeight="8:1">
+      <mat-grid-tile  *ngFor="let tea of teas" routerLink="{{'/tea-info/'+tea.id}}" routerLinkActive='active' class="listCard" (click)= onSelect(tea) appHover>
+        <img color="accent" src="{{BaseURL+tea.image}}" alt={{tea.name}} class="smallImage">
+        <div fxFlex="85" class="description">
+          <div>{{tea.name | uppercase}}</div>
+          <div>{{tea.description}}</div>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <app-tea-info [tea]="selectedTea"></app-tea-info>
+
+</div>

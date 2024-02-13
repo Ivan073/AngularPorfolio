@@ -1,0 +1,15 @@
+@import '~@angular/material/prebuilt-themes/purple-green.css';
+
+@import '../node_modules/font-awesome/css/font-awesome.css';
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  background: #E1E1E1;
+}
+
+.hovered{
+  box-shadow: 1vw 1vw 2vw #8E8894;
+  transform: scale(1.02);
+}

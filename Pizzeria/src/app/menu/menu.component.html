@@ -1,0 +1,23 @@
+<div class="container" fxLayout="column" fxLayoutGap="10px">
+
+  <div fxFlex>
+    <div>
+      <h3>Меню</h3>
+      <hr>
+    </div>
+  </div>
+
+  <div fxFlex *ngIf="pizzas">
+    <mat-grid-list cols="3" rowHeight="3:2">
+      <mat-grid-tile *ngFor="let pizza of pizzas" [routerLink]="['/pizza-detail',pizza.id]" appHighlight >
+        <img class="image" height="350px" src="{{BaseURL + pizza.image}}" alt={{pizza.name}}>
+        <mat-grid-tile-footer>
+          <h1 matLine>{{pizza.name | uppercase}}</h1>
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <app-spinner [hiddenData]="pizzas"></app-spinner>
+
+</div>

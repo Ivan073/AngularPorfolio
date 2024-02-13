@@ -1,0 +1,50 @@
+.title{
+  margin: 7vw auto 0;
+  display: block;
+  text-align: center;
+  font-size: 2vw;
+}
+
+.teaImage{
+  width:15vw;
+  height:15vw;
+  border:1px solid green;
+}
+
+.card{
+  background: #5bbd7a;
+  cursor:pointer;
+}
+
+.list{
+  margin-left: 5vw;
+  width:92vw;
+}
+
+.listCard{
+  background: #b9fab1;
+  border:1px solid green;
+  cursor:pointer;
+}
+
+.smallImage{
+  width:8vw;
+  height:8vw;
+}
+
+.changeButton{
+  font-size: 1vw;
+  height: 3vw;
+  width:10vw;
+  background: #5bbd7a;
+  margin: 0 0 2vw 80vw;
+}
+
+.description{
+  margin-left: 3vw;
+}
+
+.grid{
+  margin: 0 auto;
+  width:98vw;
+}
