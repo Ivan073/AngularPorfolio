@@ -1,9 +1,14 @@
+Angular проекты с использованием Angular Material и json-server для эмуляции Backend
+
+
 Запуск клиента:
 	npm start
 
 Запуск эмулятора сервера через json-server:
 	json-server --watch db.json --port 3000 (соответсвтует baseUrl="localhost/:3000" используемом для получения данных с сервера)
 	Все данные хранятся в db.json (+ ссылки на public/images)
+
+
 
 Проект "Пиццерия":
   На главной странице отображаются первые 2 пиццы со статусом featured
